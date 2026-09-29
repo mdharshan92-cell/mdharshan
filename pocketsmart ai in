@@ -1,0 +1,3 @@
+async def jewelry_planner(request: Request, current_user: UserInDB = Depends(get_current_active_user)):
+    """Jewelry budget planner page"""
+    return templates.TemplateResponse("jewelry_planner.html", {"request": request, "user": current_user})
